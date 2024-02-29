@@ -6,9 +6,9 @@
 
 <br>
 
-## <picture><img src = "https://github.com/azazelaza/azazelaza/public/about_me.gif" width = 50px></picture> **About me**
+## <picture><img src = "https://github.com/azazelaza/azazelaza/raw/main/public/about_me.gif" width = 50px></picture> **About me**
 
-<picture> <img align="right" src="https://github.com/azazelaza/azazelaza/public/dev.png" width = 250px></picture>
+<picture> <img align="right" src="https://github.com/azazelaza/azazelaza/raw/main/public/dev.png" width = 250px></picture>
 
 <br>
 
@@ -116,7 +116,7 @@
 <br>
 <br>
 
-## <b> Let's Connect..!</b><img src="https://github.com/azazelaza/azazelaza/public/handshake.gif" width ="80">
+## <b> Let's Connect..!</b><img src="https://github.com/azazelaza/azazelaza/raw/main/public/handshake.gif" width ="80">
 
 <br>
 <div align='left'>
@@ -124,7 +124,7 @@
 <ul>
 
 <li>
-<a href="https://linkedin.com/in/azazelaza" target="_blank">
+<a href="https://www.linkedin.com/in/azazelaza/" target="_blank">
 <img src="https://img.shields.io/badge/linkedin:  azazelaza-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white" alt=linkedin style="margin-bottom: 5px;"/>
 </a>
 </li>
@@ -140,7 +140,7 @@
 <br>
 
 <li>
-<a href="mailto:azazelaza@gmail.com" target="_blank">
+<a href="mailto:azafer150@gmail.com" target="_blank">
 <img src="https://img.shields.io/badge/gmail:  azazelaza-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" t=mail style="margin-bottom: 5px;" />
 </a>
 </li>
