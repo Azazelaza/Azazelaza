@@ -1,0 +1,154 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  href: string;
+  class: string;
+}
+const { title, body, class: className } = Astro.props;
+---
+
+<li class:list={["b-z-b", className]}></li>
+<li class:list={["link-card", className]}>
+  <a href="#aboutme">
+    <h2>
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p>
+      {body}
+    </p>
+  </a>
+</li>
+<script>
+  import { isOpen } from "../store/store.js";
+  document.querySelectorAll(".link-card").forEach((b) => {
+    b.addEventListener("click", () => {
+      isOpen.set(!isOpen.value);
+      document.querySelector(".link-card-grid")?.classList.add("anyOpen");
+      if (b.classList.contains("active")) {
+        document.querySelector(".link-card-grid")?.classList.remove("anyOpen");
+        document
+          .querySelector(".b-z-b." + b.classList[1])
+          ?.classList.remove("active");
+        return b.classList.remove("active");
+      }
+      document
+        .querySelector(".b-z-b." + b.classList[1])
+        ?.classList.add("active");
+      b.classList.add("active");
+    });
+  });
+</script>
+<style>
+  .b-z-b {
+    width: 48%;
+    list-style: none;
+    display: flex;
+    background-color: #23262d;
+    text-align: center;
+    border-radius: 8px;
+    background-position: 100%;
+    height: 190px;
+    transition: 1s all ease-in-out;
+    position: absolute;
+    &.active {
+      top: 760px !important;
+      height: 230px;
+    }
+    &.one {
+      top: 0;
+    }
+    &.two {
+      top: 0;
+      right: 0;
+    }
+    &.three {
+      top: 220px;
+      bottom: 0px;
+    }
+    &.fourth {
+      top: 220px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .link-card {
+    width: 48%;
+    list-style: none;
+    display: flex;
+    background-color: #23262d;
+    text-align: center;
+    border-radius: 8px;
+    background-position: 100%;
+    height: 190px;
+    transition:
+      height 0.5s ease-in-out,
+      width 0.5s ease-in-out 0.5s,
+      top 0.5s ease-in-out 1s,
+      background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    position: absolute;
+    &.one {
+      top: 0;
+    }
+    &.two {
+      top: 0;
+      right: 0;
+    }
+    &.three {
+      top: 220px;
+      bottom: 0px;
+    }
+    &.fourth {
+      top: 220px;
+      right: 0;
+      bottom: 0;
+    }
+
+    &.active {
+      transition:
+        top 0.5s ease-in-out,
+        width 0.5s ease-in-out 0.5s,
+        height 0.5s ease-in-out 1s,
+        background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      background-image: none !important;
+      bottom: 0;
+      &.one {
+        width: 100%;
+        height: 1000px;
+        top: -222px;
+      }
+      &.two {
+        width: 100%;
+        height: 1000px;
+        top: -174px;
+      }
+    }
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
+  }
+</style>
