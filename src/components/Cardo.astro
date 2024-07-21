@@ -2,7 +2,6 @@
 interface Props {
   title: string;
   body: string;
-  href: string;
   class: string;
 }
 const { title, body, class: className } = Astro.props;
@@ -171,18 +170,21 @@ const { title, body, class: className } = Astro.props;
         </div>
       )
     }
-    {className == "fourth" && (
-      <div class="dividendo">
-        <hr>
-        <h2>Contacta conmigo:</h2>
-        Si deseas hacer alguna cotizacion, idea de proyecto, oportunidad de trabajo o tienes alguna propuesta contactame en estos medios:
-        <ul>
-          <li>Telefono: +52 3319060060</li>
-          <li>Correo: azafer150@gmail.com</li>
-          <li>Linkedin: Azazelaza</li>
-        </ul>
-      </div>
-    )}
+    {
+      className == "fourth" && (
+        <div class="dividendo">
+          <hr />
+          <h2>Contacta conmigo:</h2>
+          Si deseas hacer alguna cotizacion, idea de proyecto, oportunidad de
+          trabajo o tienes alguna propuesta contactame en estos medios:
+          <ul>
+            <li>Telefono: +52 3319060060</li>
+            <li>Correo: azafer150@gmail.com</li>
+            <li>Linkedin: Azazelaza</li>
+          </ul>
+        </div>
+      )
+    }
   </div>
 </li>
 <script>
