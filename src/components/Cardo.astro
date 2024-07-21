@@ -8,9 +8,9 @@ interface Props {
 const { title, body, class: className } = Astro.props;
 ---
 
-<li class:list={["b-z-b", className]}></li>
+<!-- <li class:list={["b-z-b", className]}></li> -->
 <li class:list={["link-card", className]}>
-  <a href="#aboutme">
+  <div class="body">
     <h2>
       {title}
       <span>&rarr;</span>
@@ -18,7 +18,172 @@ const { title, body, class: className } = Astro.props;
     <p>
       {body}
     </p>
-  </a>
+    {
+      className == "one" && (
+        <div class="dividendo">
+          <hr />
+          <h2>Resumen</h2>
+          Soy fiel seguidor de la calidad, mientras tenga todos los recursos en
+          regla podre hacer cualquier producto de calidad.
+          <br />
+          Me adentre en el mundo de la programacion a la edad de los 15 años a
+          pesar de mi corta edad la empresa Dynamic Solutions me apoyo en
+          desarrollar el potencial que tenia en el mundo de la programacion asi
+          mismo tambien me dio trabajo durante bastante tiempo a pesar de los
+          problemas que esto ocasionaba, les estoy inmensamente agradecido por
+          esa oportunidad.
+          <br />
+          Siempre he sido alguien que aprende rapido por lo que mi capacidad en
+          programacion y otras actividades no se limita solamente a lo
+          tecnologico, tambien dedico esfuerzo a lo fisico y deportes de ambos
+          ramos.
+          <br />
+          <h2>Principales Skills</h2>
+          <ul>
+            <li>Trabajo en equipo</li>
+            <li>Aprendizaje Rapido</li>
+            <li>Comunicacion</li>
+            <li>Proactividad</li>
+            <li>Esfuerzo y dedicacion constantes</li>
+          </ul>
+          <h2>Hobbies</h2>
+          <ul>
+            <li>Baloncesto</li>
+            <li>Videojuegos</li>
+            <li>Psicologia</li>
+            <li>Senderismo</li>
+            <li>Anime</li>
+            <li>Deportes Extremos</li>
+          </ul>
+        </div>
+      )
+    }
+    {
+      className == "two" && (
+        <div class="dividendo">
+          <hr />
+          <h2>¿Puedes desarrollar mi idea?</h2>
+          <br />
+          Cualquier proyecto tecnologico que tengas en mente se puede realizar
+          <br />
+          Solo debemos establecer a que categoria pertenece.
+          <br />
+          Alguno de los servicios que yo ofrezco son:
+          <br />
+          <br />
+          <ul>
+            {/* TODO: Hacer iconos para cada una de estos servicios */}
+            <li>Paginas Web</li>
+            <li>Animaciones Web</li>
+            <li>Desarrollos a la medida</li>
+            <li>Soporte de Paginas Existentes</li>
+            <li>Creacion de Videojuegos Web</li>
+            <li>Marketing digital</li>
+            <li>Aplicaciones Moviles</li>
+            <li>Aplicaciones de Escritorio</li>
+            <li>Aplicaciones de Consolas</li>
+            <li>Aplicaciones de Televisiones</li>
+            <li>Diseño Web</li>
+            <li>Diseño Grafico</li>
+          </ul>
+          <br />
+          <h2>Otros servicios</h2>
+          <p>
+            Mi variada experiencia en diferentes actividades me han hecho
+            conocer a diferentes personas y con ello una red de contactos con
+            excelentes personas en diferentes tipos de trabajos
+          </p>
+          <br />
+          <b>
+            Contactame y cotizaremos tu proyecto junto con tiempos de entrega.
+          </b>
+        </div>
+      )
+    }
+    {
+      className == "three" && (
+        <div class="dividendo">
+          <hr />
+          <h2>Empresas:</h2>
+          <ul>
+            <li>
+              <a href="https://xambre.com/">Xambre</a>
+            </li>
+            <li>
+              <a href="https://www.feria.uag.mx/">Feria Virtual UAG</a>
+            </li>
+            <li>
+              <a href="https://www.ucg.edu.mx/">UCG</a>
+            </li>
+            <li>
+              <a href="https://www.panbueno.mx/">Pan Bueno</a>
+            </li>
+            <li>
+              <a href="https://www.varquitect.com/">Varquitect</a>
+            </li>
+            <li>
+              <a href="https://hcasablanca.com.mx/">Hotel Casa Blanca</a>
+            </li>
+            <li>
+              <a href="https://vinosamerica.com/">Vinos America</a>
+            </li>
+            <li>
+              <a href="https://mentordh.com/">Mentor DH</a>
+            </li>
+            <li>
+              <a href="http://bankple.com/">Bankple</a>
+            </li>
+            <li>
+              <a href="https://quintafabiana.com/">Qinta Fabiana</a>
+            </li>
+            <li>
+              <a href="https://adark.mx/">Adark</a>
+            </li>
+            <li>
+              <a href="https://primadera.com/">Primadera</a>
+            </li>
+            <li>
+              <a href="http://ditems.com/">Ditems</a>
+            </li>
+            <li>
+              <a href="https://pet-identity.com/">PETID</a>
+            </li>
+            <li>
+              <a href="https://tag-tical.com/">Tagtical</a>
+            </li>
+          </ul>
+          <br />
+          <h2>Propios:</h2>
+          <ul>
+            <li>Clon de Github</li>
+            <li>Clon de Facebook</li>
+            <li>Clon de ChatGPT</li>
+            <li>Clon de Minecraft con Javascript</li>
+          </ul>
+          <br />
+          <b>
+            Diferentes proyectos son privados de algunas empresas y no se pueden
+            mencionar en esta area sin embargo al momento de alguna presentacion
+            se pueden mostrar los prototipos realizados para esas empresas.
+          </b>
+          <br />
+          <p />
+        </div>
+      )
+    }
+    {className == "fourth" && (
+      <div class="dividendo">
+        <hr>
+        <h2>Contacta conmigo:</h2>
+        Si deseas hacer alguna cotizacion, idea de proyecto, oportunidad de trabajo o tienes alguna propuesta contactame en estos medios:
+        <ul>
+          <li>Telefono: +52 3319060060</li>
+          <li>Correo: azafer150@gmail.com</li>
+          <li>Linkedin: Azazelaza</li>
+        </ul>
+      </div>
+    )}
+  </div>
 </li>
 <script>
   import { isOpen } from "../store/store.js";
@@ -41,7 +206,8 @@ const { title, body, class: className } = Astro.props;
   });
 </script>
 <style>
-  .b-z-b {
+  /* TODO: Concepto de cards con slide */
+  /* .b-z-b {
     width: 48%;
     list-style: none;
     display: flex;
@@ -50,7 +216,7 @@ const { title, body, class: className } = Astro.props;
     border-radius: 8px;
     background-position: 100%;
     height: 190px;
-    transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out 1s;
     position: absolute;
     &.active {
       top: 760px !important;
@@ -71,6 +237,26 @@ const { title, body, class: className } = Astro.props;
       top: 220px;
       right: 0;
       bottom: 0;
+    }
+  } */
+  .dividendo {
+    opacity: 0;
+    transition: 0.5s all;
+    text-align: start;
+    ul {
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      margin: 1rem;
+    }
+    a:hover {
+      color: #c3ade5;
+    }
+    a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
     }
   }
   .link-card {
@@ -113,19 +299,23 @@ const { title, body, class: className } = Astro.props;
         background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
       background-image: none !important;
       bottom: 0;
-      &.one {
+      &.one,
+      &.two,
+      &.three,
+      &.fourth {
         width: 100%;
-        height: 1000px;
+        height: 930px;
         top: -222px;
       }
-      &.two {
-        width: 100%;
-        height: 1000px;
-        top: -174px;
+      .body {
+        .dividendo {
+          opacity: 1;
+          transition: 1s all 1.3s;
+        }
       }
     }
   }
-  .link-card > a {
+  .link-card > .body {
     width: 100%;
     text-decoration: none;
     line-height: 1.4;
@@ -134,6 +324,7 @@ const { title, body, class: className } = Astro.props;
     color: white;
     background-color: #23262d;
     opacity: 0.8;
+    cursor: pointer;
   }
   h2 {
     margin: 0;
